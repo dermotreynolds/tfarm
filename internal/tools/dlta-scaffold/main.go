@@ -568,7 +568,7 @@ func (gen documentationGenerator) writeResource(s string, a Artefact) string {
 	dirName := gen.resourceName
 	// /home/dermot/source/repo/Repo.DltaModules
 
-	outputDirectoryName := fmt.Sprintf("/%s/%s/%s/%s/", gen.dltaPath, resourceKind, dirName, subDir)
+	outputDirectoryName := fmt.Sprintf("%s//%s//%s//%s//", gen.dltaPath, resourceKind, dirName, subDir)
 	// outputDirectoryPath, err := filepath.Abs(outputDirectoryName)
 	outputDirectoryPath := outputDirectoryName
 
@@ -576,7 +576,7 @@ func (gen documentationGenerator) writeResource(s string, a Artefact) string {
 	// 	fmt.Printf("writeResource \"0. directory error\": %v\n", err.Error())
 	// }
 
-	outputFileName := fmt.Sprintf("/%s/%s/%s/%s/%s", gen.dltaPath, resourceKind, dirName, subDir, fileName)
+	outputFileName := fmt.Sprintf("%s//%s//%s//%s//%s", gen.dltaPath, resourceKind, dirName, subDir, fileName)
 	// outputPath, err := filepath.Abs(outputFileName)
 
 	outputPath := outputFileName
@@ -645,7 +645,7 @@ func (gen documentationGenerator) writeInitResourceProperties() string {
 		fileName := gen.resourceName
 		dirName := gen.resourceName
 		subDir := "resource"
-		outputDirectoryName := fmt.Sprintf("/%s/%s/%s/%s/", gen.dltaPath, resourceKind, dirName, subDir)
+		outputDirectoryName := fmt.Sprintf("%s//%s//%s//%s//", gen.dltaPath, resourceKind, dirName, subDir)
 		// outputDirectoryPath, err := filepath.Abs(outputDirectoryName)
 
 		outputDirectoryPath := outputDirectoryName
@@ -654,7 +654,7 @@ func (gen documentationGenerator) writeInitResourceProperties() string {
 		// 	fmt.Printf("initResourceProperties \"0. directory error\": %v\n", err.Error())
 		// }
 
-		outputFileName := fmt.Sprintf("%s/%s/%s/%s/%s.json", gen.dltaPath, resourceKind, dirName, subDir, fileName)
+		outputFileName := fmt.Sprintf("%s//%s//%s//%s//%s.json", gen.dltaPath, resourceKind, dirName, subDir, fileName)
 		// outputPath, err := filepath.Abs(outputFileName)
 
 		outputPath := outputFileName
@@ -717,7 +717,7 @@ func (gen documentationGenerator) readResourceProperties() map[string]summaryAtt
 		dirName := gen.resourceName
 		subDir := "resource"
 
-		outputFileName := fmt.Sprintf("%s/%s/%s/%s/%s.json", gen.dltaPath, resourceKind, dirName, subDir, fileName)
+		outputFileName := fmt.Sprintf("%s//%s//%s//%s//%s.json", gen.dltaPath, resourceKind, dirName, subDir, fileName)
 
 		outputPath, err := filepath.Abs(outputFileName)
 		if err != nil {
